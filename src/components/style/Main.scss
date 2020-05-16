@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container-fluid {
+    padding: 10px;
+    img {
+        margin-left: 5%;
+        width: 10%;
+    }
+    .nav-links {
+        margin-right: 300px;
+        font-size: 18px;
+        .nav-works-btn {
+            padding-right: 30px;
+            color: #000;
+        }
+        .jobs {
+            color: #000;
+        }
+    }
+    .links {
+        margin-right: 20%;
+        font-size: 18px;
+        .login {
+            padding-right: 30px;
+            color: #000;
+        }
+        .signup {
+            padding-right: 30px;
+            color: #000;
+        }
+        button {
+            background-color: #fc8c14;
+            border: 1px solid #f77d0e;
+            color: #FFF;
+        }
+    }
+}
