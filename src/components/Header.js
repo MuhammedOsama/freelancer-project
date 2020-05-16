@@ -9,7 +9,7 @@ class Header extends Component {
                 <img src="/images/logo.svg" alt="Logo"/>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="nav-links">
+                    <Nav className="mr-auto nav-links">
                         <Nav.Link className="nav-works-btn" href="#">How It Works</Nav.Link>
                         <Nav.Link className="jobs" href="#">Browse Jobs</Nav.Link>
                     </Nav>
