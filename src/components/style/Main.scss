@@ -6,14 +6,12 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.container-fluid {
-    padding: 10px;
+// Start Navbar
+.container {
     img {
-        margin-left: 5%;
         width: 10%;
     }
     .nav-links {
-        margin-right: 300px;
         font-size: 18px;
         .nav-works-btn {
             padding-right: 30px;
@@ -41,3 +39,87 @@ body {
         }
     }
 }
+
+// End Navbar
+// Start Carousel
+.expert {
+    img {
+        width: 100%;
+        height: 100%;
+    }
+    .carousel-indicators {
+        margin-left: -65%;
+        bottom: 30px;
+    }
+    .carousel-indicators li {
+        margin-right: 7px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+    }
+    .carousel-caption {
+        max-width: 600px;
+        text-align: left;
+        padding-bottom: 150px;
+        right: 25%;
+        left: 5%;
+    }
+    .carousel-caption h1 {
+        font-size: 40px;
+        line-height: 60px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+    .carousel-caption p {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+    // .carousel-caption button {
+    //     width: ;
+    // }
+    .carousel-control-prev-icon {
+        display: none;
+    }
+    .carousel-control-next-icon {
+        display: none;
+    }
+    .bg-cover {
+        height: 595px;
+        // background: url(./assets/cover.jpg);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        background-repeat: no-repeat;
+    }
+    button {
+        padding: 10px;
+        margin-right: 15px;
+        font-size: 18px;
+    }
+    button:first-of-type {
+        background: #fc8c14;
+        border: 2px solid #f77d0e;
+        color: #FFF;
+        font-weight: 700;
+    }
+    button:last-of-type {
+        background: transparent;
+        border: 2px solid #FFF;
+        color: #FFF;
+        font-weight: 700;
+    }
+    .price {
+        text-align: right;
+        font-size: 18px;
+        margin-top: 60px;
+        label {
+            padding: 7px;
+            background-color: rgba(56, 56, 56, .4);
+            border: 1px solid rgba(56, 56, 56, .4);
+            border-radius: 50%;
+        }
+    }
+}
+
+// End Carousel
