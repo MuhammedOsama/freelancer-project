@@ -17,6 +17,9 @@ body {
 
     img {
         width: 10%;
+        @media (max-width: 1024px) {
+          width: 15%;
+        }
     }
 
     .nav-links {
@@ -111,14 +114,11 @@ body {
         }
     }
 
-    .carousel-inner {
-        height: 600px;
-    }
 
     .carousel-indicators
     {
         right: 84%;
-        bottom: 10%;
+        bottom: 5%;
         margin: 0;
     }
 
@@ -137,3 +137,21 @@ body {
 
 }
 // End Carousel
+
+// AsUsedBy
+
+#as-used-by-block
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+  span {
+    font-size: 20px;
+    font-weight: 500;
+    color: #777;
+  }
+}
+
+// End AsUsedBy

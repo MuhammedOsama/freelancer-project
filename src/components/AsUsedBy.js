@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
-class Company extends Component {
+class AsUsedBy extends Component {
     render() {
         return(
-            <div className="col">
-                As used by
+            <div id="as-used-by-block">
+                <span>As used By</span>
                 <img src="/images/used/microsoft.svg" alt="Microsoft"/>
                 <img src="/images/used/sap.svg" alt="Sap"/>
                 <img src="/images/used/metlife.svg" alt="MetLife"/>
@@ -18,4 +18,4 @@ class Company extends Component {
     }
 }
 
-export default Company;
+export default AsUsedBy;
