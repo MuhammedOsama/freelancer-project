@@ -95,17 +95,20 @@ body {
         color: #FFF;
         font-weight: 700;
     }
-    .price {
-        text-align: right;
-        font-size: 18px;
-        margin-top: 60px;
-        label {
-            padding: 7px;
-            background-color: rgba(56, 56, 56, .4);
-            border: 1px solid rgba(56, 56, 56, .4);
-            border-radius: 50%;
-        }
-    }
 }
 
 // End Carousel
+// Start Company
+.company-title {
+    padding: 40px;
+    span {
+        font-size: 20px;
+        color: #767676;
+        padding-right: 55px;
+    }
+    img {
+        padding-right: 55px;
+    }
+}
+
+// End Company

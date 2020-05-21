@@ -13,10 +13,6 @@ class MainCarousel extends Component {
                             <p>Millions of small businesses use Freelancer to turn their ideas into reality..</p>
                             <button className="hire" value="submit">I want to Hire</button>
                             <button className="work" value="submit">I want to Work</button>
-                            <div className="price">
-                                <span>This Mobile App Design Cost </span>
-                                <label>$150</label>
-                            </div>
                         </Carousel.Caption>
                     </Carousel.Item>
 
@@ -27,10 +23,6 @@ class MainCarousel extends Component {
                             <p>Millions of small businesses use Freelancer to turn their ideas into reality..</p>
                             <button className="hire" value="submit">I want to Hire</button>
                             <button className="work" value="submit">I want to Work</button>
-                            <div className="price">
-                                <span>This Architectural Design Cost </span>
-                                <label>$200</label>
-                            </div>
                         </Carousel.Caption>
                     </Carousel.Item>
 
@@ -41,10 +33,6 @@ class MainCarousel extends Component {
                             <p>Millions of small businesses use Freelancer to turn their ideas into reality..</p>
                             <button className="hire" value="submit">I want to Hire</button>
                             <button className="work" value="submit">I want to Work</button>
-                            <div className="price">
-                                <span>This Nasa Design Cost </span>
-                                <label>$250</label>
-                            </div>
                         </Carousel.Caption>
                     </Carousel.Item>
 
@@ -55,10 +43,6 @@ class MainCarousel extends Component {
                             <p>Millions of small businesses use Freelancer to turn their ideas into reality..</p>
                             <button value="submit">I want to Hire</button>
                             <button value="submit">I want to Work</button>
-                            <div className="price">
-                                <span>This Website Design Cost </span>
-                                <label>$300</label>
-                            </div>
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>

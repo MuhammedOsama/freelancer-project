@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 class Company extends Component {
     render() {
         return(
-            <div className="col">
-                As used by
+            <div className="company-title">
+                <span>As used by</span>
                 <img src="/images/used/microsoft.svg" alt="Microsoft"/>
                 <img src="/images/used/sap.svg" alt="Sap"/>
                 <img src="/images/used/metlife.svg" alt="MetLife"/>
