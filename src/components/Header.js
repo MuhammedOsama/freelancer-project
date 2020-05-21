@@ -1,12 +1,12 @@
-import React, {Component} from 'react'
-import {Nav, Navbar} from 'react-bootstrap';
+import React, { Component } from 'react'
+import { Nav, Navbar } from 'react-bootstrap';
 
 class Header extends Component {
     render() {
     return(
-        <div className="container-fluid">
+        <div className="container">
             <Navbar collapseOnSelect expand="lg">
-                <img src="/images/logo.svg" alt="Logo"/>
+                <img src="/images/logo/logo.svg" alt="Logo"/>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto nav-links">
