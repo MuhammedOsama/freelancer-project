@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import { Carousel } from 'react-bootstrap';
 
-class CarouselSection extends Component {
+class MainCarousel extends Component {
     render() {
         return(
-            <div className="expert">
-                <Carousel>
+            <div>
+                <Carousel className="expert">
                     <Carousel.Item className="bg-cover">
-                        <img src="/images/carousel/mobile.jpg" alt=""/>
+                        <img src="/images/carousel/mobile.jpg" alt="Mobile"/>
                         <Carousel.Caption>
-                            <h1>Hire expert freelancers for any job, online</h1>
+                            <h1 className="caption">Hire expert freelancers for any job, online</h1>
                             <p>Millions of small businesses use Freelancer to turn their ideas into reality..</p>
                             <button className="hire" value="submit">I want to Hire</button>
                             <button className="work" value="submit">I want to Work</button>
@@ -21,9 +21,9 @@ class CarouselSection extends Component {
                     </Carousel.Item>
 
                     <Carousel.Item className="bg-cover">
-                        <img src="/images/carousel/architectural.jpg" alt=""/>
+                        <img src="/images/carousel/architectural.jpg" alt="Architectural"/>
                         <Carousel.Caption>
-                            <h1>Hire expert freelancers for any job, online</h1>
+                            <h1 className="caption">Hire expert freelancers for any job, online</h1>
                             <p>Millions of small businesses use Freelancer to turn their ideas into reality..</p>
                             <button className="hire" value="submit">I want to Hire</button>
                             <button className="work" value="submit">I want to Work</button>
@@ -35,29 +35,29 @@ class CarouselSection extends Component {
                     </Carousel.Item>
 
                     <Carousel.Item className="bg-cover">
-                        <img src="/images/carousel/nasa.jpg" alt=""/>
+                        <img src="/images/carousel/nasa.jpg" alt="Nasa"/>
                         <Carousel.Caption>
-                            <h1>Hire expert freelancers for any job, online</h1>
+                            <h1 className="caption">Hire expert freelancers for any job, online</h1>
                             <p>Millions of small businesses use Freelancer to turn their ideas into reality..</p>
                             <button className="hire" value="submit">I want to Hire</button>
                             <button className="work" value="submit">I want to Work</button>
                             <div className="price">
                                 <span>This Nasa Design Cost </span>
-                                <label>$50</label>
+                                <label>$250</label>
                             </div>
                         </Carousel.Caption>
                     </Carousel.Item>
 
                     <Carousel.Item className="bg-cover">
-                        <img src="/images/carousel/website.jpg" alt=""/>
+                        <img src="/images/carousel/website.jpg" alt="Website"/>
                         <Carousel.Caption>
-                            <h1>Hire expert freelancers for any job, online</h1>
+                            <h1 className="caption">Hire expert freelancers for any job, online</h1>
                             <p>Millions of small businesses use Freelancer to turn their ideas into reality..</p>
                             <button className="hire" value="submit">I want to Hire</button>
                             <button className="work" value="submit">I want to Work</button>
                             <div className="price">
                                 <span>This Website Design Cost </span>
-                                <label>$390</label>
+                                <label>$300</label>
                             </div>
                         </Carousel.Caption>
                     </Carousel.Item>
@@ -67,4 +67,4 @@ class CarouselSection extends Component {
     }
 }
 
-export default CarouselSection;
+export default MainCarousel;

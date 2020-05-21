@@ -1,12 +1,12 @@
 import React from 'react';
 import Header from './components/Header';
-import CarouselSection from './components/CarouselSection';
+import MainCarousel from './components/MainCarousel';
 
 const App = () => {
   return (
     <div className="app">
       <Header />
-      <CarouselSection />
+      <MainCarousel />
     </div>
   );
 }
