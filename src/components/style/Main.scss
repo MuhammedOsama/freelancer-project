@@ -4,154 +4,133 @@ body {
 }
 
 // Start Navbar
-#header
-{
-    a
-    {
-      color: #111;
-      transition: 0.2s;
-      &:hover {
-        color: $secondColor;
-      }
+#header {
+    a {
+        color: #111;
+        transition: 0.2s;
+        &:hover {
+            color: $secondColor;
+        }
     }
-
     img {
         width: 10%;
         @media (max-width: 1024px) {
-          width: 15%;
+            width: 15%;
         }
     }
-
     .nav-links {
         margin-left: 30px;
         font-size: 16px;
     }
-
-    .links
-    {
+    .links {
         font-size: 16px;
-
-        .login {
-            padding-right: 30px;
-        }
-
+        .login,
         .signup {
             padding-right: 30px;
         }
-
         button {
             background-color: $mainColor;
-            border:0;
+            border: 0;
             color: #FFF;
             padding: 0px 10px;
-
             &:hover {
-              background-color: $mainColor_hover;
+                background-color: $mainColor_hover;
             }
-
         }
-
     }
 }
 
 // End Navbar
-
-/*Carousel*/
-
-.main-carousel
-{
+// Start Carousel
+.main-carousel {
     position: relative;
     overflow: hidden;
-
-
-    .main-carousel-caption
-    {
-          position: absolute;
-          top: 10em;
-          left: 5em;
-          width: 580px;
-          color: #ffffff;
-          z-index: 1;
-
-         h1{
-                font-size: 2.5625rem;
-                font-weight: bold;
-         }
-
-         .lead {
-                font-size: 1.25rem;
-                font-weight: 500;
-         }
-
-         button {
-                width: 150px;
-                height: 50px;
-                display: inline-block;
-                color: #ffffff;
-                font-size: 20px;
-                font-weight: bold;
-                border: 2px solid #ffffff;
+    .main-carousel-caption {
+        position: absolute;
+        top: 10em;
+        left: 5em;
+        width: 580px;
+        color: #FFF;
+        z-index: 1;
+        h1 {
+            font-size: 2.5625rem;
+            font-weight: bold;
         }
-
+        .lead {
+            font-size: 1.25rem;
+            font-weight: 500;
+        }
+        button {
+            width: 150px;
+            height: 50px;
+            display: inline-block;
+            color: #FFF;
+            font-size: 20px;
+            font-weight: bold;
+            border: 2px solid #FFF;
+        }
         button:first-of-type {
-                background-color: $mainColor;
-                border-color: $mainColor;
+            background-color: $mainColor;
+            border-color: $mainColor;
         }
-
-
         button:first-of-type:hover {
-                background-color: $mainColor_hover;
-                border-color: $mainColor_hover;
+            background-color: $mainColor_hover;
+            border-color: $mainColor_hover;
         }
-
         button:last-of-type {
-                margin-left: 15px;
-                background: transparent;
+            margin-left: 15px;
+            background: transparent;
         }
-
         button:last-of-type:hover {
-                background: rgba(57, 108, 203, 0.75);
+            background: rgba(57, 108, 203, 0.75);
         }
     }
-
-
-    .carousel-indicators
-    {
+    .carousel-indicators {
         right: 84%;
         bottom: 5%;
         margin: 0;
     }
-
-    .carousel-control-prev, .carousel-control-next
-    {
+    .carousel-control-prev,
+    .carousel-control-next {
         display: none;
     }
-
-    .carousel-indicators .active, .carousel-indicators li
-    {
+    .carousel-indicators .active,
+    .carousel-indicators li {
         height: 11px;
         width: 11px;
         border-radius: 50%;
         text-align: left;
     }
-
+    .carousel-caption {
+        font-size: 18px;
+        font-weight: 500;
+        text-align: right;
+        label {
+            bottom: 5%;
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            padding-right: 7px;
+            font-size: 20px;
+            background-color: rgba(0, 0, 0, .6);
+            border-radius: 50px;
+        }
+    }
 }
+
 // End Carousel
-
 // AsUsedBy
-
-#as-used-by-block
-{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  border-bottom: 1px solid #ddd;
-  span {
-    font-size: 20px;
-    font-weight: 500;
-    color: #777;
-  }
+#as-used-by-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #DDD;
+    span {
+        font-size: 20px;
+        font-weight: 500;
+        color: #777;
+    }
 }
 
 // End AsUsedBy
