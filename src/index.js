@@ -10,9 +10,7 @@ import '@fortawesome/fontawesome-free/css/all.css';
 import './components/style/Main.scss';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <App />,
   document.getElementById('root')
 );
 

@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import { Nav, Navbar } from 'react-bootstrap';
 
 class Header extends Component {
-    render() {
-    return(
+    render () {
+    return (
         <div id="header" className="container">
             <Navbar collapseOnSelect expand="lg">
                 <img src="/images/logo/logo.svg" alt="Logo"/>

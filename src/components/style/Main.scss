@@ -1,4 +1,9 @@
 @import "variables.scss";
+* {
+    padding: 0;
+    margin: 0;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -119,13 +124,14 @@ body {
 }
 
 // End Carousel
-// AsUsedBy
+// Start AsUsedBy
 #as-used-by-block {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 35px;
     border-bottom: 1px solid #DDD;
+    margin-bottom: 80px;
     span {
         font-size: 20px;
         font-weight: 500;
@@ -134,3 +140,20 @@ body {
 }
 
 // End AsUsedBy
+// Start NeedWorkDone
+.work-done {
+    h2 {
+        font-weight: 600;
+        margin-bottom: 40px;
+    }
+    .col img,
+    h3 {
+        margin-bottom: 25px;
+    }
+    p {
+        font-size: 18px;
+        font-weight: 500;
+    }
+}
+
+// End NeedWorkDone

@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './components/Header';
 import MainCarousel from './components/MainCarousel';
 import AsUsedBy from './components/AsUsedBy';
+import NeedWorkDone from './components/NeedWorkDone';
 
 const App = () => {
   return (
@@ -9,6 +10,7 @@ const App = () => {
       <Header />
       <MainCarousel />
       <AsUsedBy />
+      <NeedWorkDone />
     </div>
   );
 }
