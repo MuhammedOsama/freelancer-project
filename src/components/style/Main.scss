@@ -6,6 +6,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 2000px;
 }
 
 // Start Navbar
@@ -142,9 +143,10 @@ body {
 // End AsUsedBy
 // Start NeedWorkDone
 .work-done {
+    margin-bottom: 80px;
     h2 {
-        font-weight: 600;
-        margin-bottom: 40px;
+        margin-bottom: 60px;
+        font-weight: 700;
     }
     .col img,
     h3 {
@@ -157,3 +159,26 @@ body {
 }
 
 // End NeedWorkDone
+// Start GreatAboutIt
+.great-about {
+    h2 {
+        margin-bottom: 60px;
+        text-align: center;
+        font-weight: 700;
+    }
+    .col img,
+    h3 {
+        display: block;
+        float: left;
+        margin-right: 20px;
+    }
+    p {
+        float: left;
+        margin-top: 10px;
+        font-size: 20px;
+        font-weight: 400;
+        margin-bottom: 50px;
+    }
+}
+
+// End GreatAboutIt
