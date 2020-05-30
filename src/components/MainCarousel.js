@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Carousel } from 'react-bootstrap';
 
-class MainCarousel extends React.Component{
+class MainCarousel extends Component{
   render (){
         return (
             <div className="main-carousel d-none d-md-block">
