@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Favorite extends Component {
     render () {
         return (
-            <div className="favorite">
+            <div id="favorite">
                 <h2>Crowd favorites<br/>Here are some of our most popular projects:</h2>
                 <div className="container">
                     <div className="row">
