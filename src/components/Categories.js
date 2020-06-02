@@ -5,55 +5,157 @@ class Categories extends Component {
         return(
             <div className="categories">
                 <h2>Get work done in over 1350 different categories</h2>
-                <div className="container">
+                <div className="container text-center">
                     <div className="row">
-                        <div className="col">
+                        <div className="col ph">
                             <img src="/images/categories/hire-php.svg" alt="Php"/>
-                            <p>PHP</p>
                         </div>
                         <div className="col">
                             <img src="/images/categories/hire-website-design.svg" alt="Website"/>
-                            <p>Website Design</p>
                         </div>
                         <div className="col">
                             <img src="/images/categories/hire-graphic-design.svg" alt="Graphic"/>
-                            <p>Graphic Design</p>
                         </div>
                         <div className="col">
                             <img src="/images/categories/hire-mobile-apps.svg" alt="Mobile"/>
-                            <p>Mobile</p>
                         </div>
                         <div className="col">
                             <img src="/images/categories/hire-android.svg" alt="Android"/>
-                            <p>Android Apps</p>
                         </div>
                         <div className="col">
                             <img src="/images/categories/hire-iphone-apps.svg" alt="iPhone"/>
-                            <p>iPhone Apps</p>
                         </div>
                         <div className="col">
                             <img src="/images/categories/hire-photoshop.svg" alt="Photoshop"/>
-                            <p>Photoshop</p>
                         </div>
                         <div className="col">
                             <img src="/images/categories/hire-logo-design.svg" alt="Logo"/>
-                            <p>Logo Design</p>
                         </div>
                         <div className="col">
                             <img src="/images/categories/hire-article-writing.svg" alt="Article"/>
-                            <p>Article Writing</p>
                         </div>
                         <div className="col">
                             <img src="/images/categories/hire-data-entry.svg" alt="Data"/>
-                            <p>Data Entry</p>
                         </div>
                         <div className="col">
                             <img src="/images/categories/hire-internet-marketing.svg" alt="Internet"/>
-                            <p>Internet Marketing</p>
                         </div>
                         <div className="col">
                             <img src="/images/categories/hire-seo.svg" alt="Seo"/>
-                            <p>SEO</p>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col text">
+                            <a href="#">PHP</a>
+                        </div>
+                        <div className="col">
+                            <a href="#">Website Design</a>
+                        </div>
+                        <div className="col">
+                            <a href="#">Graphic Design</a>
+                        </div>
+                        <div className="col">
+                            <a href="#">Mobile Apps</a>
+                        </div>
+                        <div className="col">
+                            <a href="#">Android Apps</a>
+                        </div>
+                        <div className="col">
+                            <a href="#">iPhone Apps</a>
+                        </div>
+                        <div className="col">
+                            <a href="#">Photoshop</a>
+                        </div>
+                        <div className="col">
+                            <a href="#">Logo Design</a>
+                        </div>
+                        <div className="col">
+                            <a href="#">Article Writing</a>
+                        </div>
+                        <div className="col">
+                            <a href="#">Data Entry</a>
+                        </div>
+                        <div className="col">
+                            <a href="#">Internet Marketing</a>
+                        </div>
+                        <div className="col">
+                            <a href="#">SEO</a>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col">
+                            <img src="/images/categories/hire-3d-modeling.svg" alt="Modeling"/>
+                        </div>
+                        <div className="col">
+                            <img src="/images/categories/hire-copy-writing.svg" alt="Copy"/>
+                        </div>
+                        <div className="col">
+                            <img src="/images/categories/hire-ghost-writing.svg" alt="Ghost"/>
+                        </div>
+                        <div className="col">
+                            <img src="/images/categories/hire-linux.svg" alt="Linux"/>
+                        </div>
+                        <div className="col">
+                            <img src="/images/categories/hire-aws.svg" alt="Amazon"/>
+                        </div>
+                        <div className="col">
+                            <img src="/images/categories/hire-banner-design.svg" alt="Banner"/>
+                        </div>
+                        <div className="col">
+                            <img src="/images/categories/hire-software-dev.svg" alt="Software"/>
+                        </div>
+                        <div className="col">
+                            <img src="/images/categories/hire-accounting.svg" alt="Accounting"/>
+                        </div>
+                        <div className="col">
+                            <img src="/images/categories/hire-finance.svg" alt="Finance"/>
+                        </div>
+                        <div className="col">
+                            <img src="/images/categories/hire-legal.svg" alt="Legal"/>
+                        </div>
+                        <div className="col">
+                            <img src="/images/categories/hire-manufacturing.svg" alt="Manufacturing"/>
+                        </div>
+                        <div className="col">
+                            <img src="/images/categories/hire-logistics.svg" alt="Logistics"/>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col">
+                            <a href="#">Modeling</a>
+                        </div>
+                        <div className="col">
+                            <a href="#">Copy</a>
+                        </div>
+                        <div className="col">
+                            <a href="#">Ghost</a>
+                        </div>
+                        <div className="col">
+                            <a href="#">Linux</a>
+                        </div>
+                        <div className="col">
+                            <a href="#">Amazon</a>
+                        </div>
+                        <div className="col">
+                            <a href="#">Banner</a>
+                        </div>
+                        <div className="col">
+                            <a href="#">Software</a>
+                        </div>
+                        <div className="col">
+                            <a href="#">Accounting</a>
+                        </div>
+                        <div className="col">
+                            <a href="#">Finance</a>
+                        </div>
+                        <div className="col">
+                            <a href="#">Legal</a>
+                        </div>
+                        <div className="col">
+                            <a href="#">Manufacturing</a>
+                        </div>
+                        <div className="col">
+                            <a href="#">Logistics</a>
                         </div>
                     </div>
                 </div>
