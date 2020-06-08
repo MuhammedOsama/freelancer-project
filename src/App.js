@@ -6,6 +6,7 @@ import NeedWorkDone from './components/NeedWorkDone';
 import GreatAboutIt from './components/GreatAboutIt';
 import Favorite from './components/Favorite';
 import Categories from './components/Categories';
+import API from './components/API';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <GreatAboutIt />
       <Favorite />
       <Categories />
+      <API />
     </div>
   );
 }

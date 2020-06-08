@@ -214,6 +214,7 @@ body {
 // End Favorite
 // Start Categories
 .categories {
+    margin-bottom: 80px;
     h2 {
         text-align: center;
         margin-bottom: 40px;
@@ -234,3 +235,34 @@ body {
 }
 
 // End Categories
+//  Start API
+.api {
+    margin-bottom: 80px;
+    .cards_section {
+        padding: 20px;
+        background-color: #EEE;
+        border-radius: 10px;
+        img {
+            width: 55%;
+            float: left;
+        }
+        .freelancer {
+            text-align: right;
+            span {
+                color: $secondColor;
+            }
+            h3 {
+                margin-top: 5px;
+            }
+            button {
+                padding: 5px;
+                color: #FFF;
+                font-weight: bold;
+                background: $secondColor;
+                border: 1px solid rgb(0, 174, 255);
+            }
+        }
+    }
+}
+
+//  End API
