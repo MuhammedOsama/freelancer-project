@@ -6,6 +6,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 4000px;
 }
 
 // Start Navbar
@@ -236,30 +237,43 @@ body {
 
 // End Categories
 //  Start API
-.api {
+.api-section {
     margin-bottom: 80px;
-    .cards_section {
+    .col {
+        display: flex;
+        background-color: $cardColor;
         padding: 20px;
-        background-color: #EEE;
-        border-radius: 10px;
+        margin-left: 20px;
+        border-radius: 5px;
         img {
-            width: 55%;
-            float: left;
+            width: 52%;
         }
-        .freelancer {
+        .api-price {
             text-align: right;
             span {
                 color: $secondColor;
             }
-            h3 {
-                margin-top: 5px;
+            button {
+                padding: 7px;
+                background-color: $secondColor;
+                color: #FFF;
+                font-size: 15px;
+                font-weight: bold;
+                border: 2px solid $secondColor;
+            }
+        }
+        .enter-price {
+            span {
+                color: $secondColor;
             }
             button {
-                padding: 5px;
+                padding: 7px;
+                margin-top: 24px;
+                background-color: $secondColor;
                 color: #FFF;
+                font-size: 15px;
                 font-weight: bold;
-                background: $secondColor;
-                border: 1px solid rgb(0, 174, 255);
+                border: 2px solid $secondColor;
             }
         }
     }
