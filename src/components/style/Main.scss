@@ -280,3 +280,30 @@ body {
 }
 
 //  End API
+// Start JobCategories
+.job {
+    margin-bottom: 80px;
+    h2 {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .col {
+        a {
+            display: block;
+            padding: 0 0 7px;
+            color: #000;
+            list-style: none;
+            transition: .2s ease-in-out;
+            &:hover {
+                color: $secondColor;
+                text-decoration: underline;
+            }
+        }
+        .fas {
+            padding-right: 10px;
+            color: #ffc24e;
+        }
+    }
+}
+
+// End JobCategories
