@@ -7,6 +7,7 @@ import GreatAboutIt from './components/GreatAboutIt';
 import Favorite from './components/Favorite';
 import Categories from './components/Categories';
 import API from './components/API';
+import JobCategories from './components/JobCategories';
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
       <Favorite />
       <Categories />
       <API />
+      <JobCategories />
     </div>
   );
 }
