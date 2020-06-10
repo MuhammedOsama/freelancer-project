@@ -8,6 +8,7 @@ import Favorite from './components/Favorite';
 import Categories from './components/Categories';
 import API from './components/API';
 import JobCategories from './components/JobCategories';
+import FooterSection from './components/FooterSection';
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
       <Categories />
       <API />
       <JobCategories />
+      <FooterSection />
     </div>
   );
 }
