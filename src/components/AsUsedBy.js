@@ -1,18 +1,33 @@
 import React, { Component } from 'react';
 
 class AsUsedBy extends Component {
+    constructor(props) {
+        super(props);
+            this.state = {
+                items: [
+                {image: "/images/used/microsoft.svg", description: "Microsoft"},
+                {image: "/images/used/sap.svg", description: "Sap"},
+                {image: "/images/used/metlife.svg", description: "MetLife"},
+                {image: "/images/used/intel.svg", description: "Intel"},
+                {image: "/images/used/boeing.svg", description: "Boeing"},
+                {image: "/images/used/avery.svg", description: "Avery"},
+                {image: "/images/used/pwc.svg", description: "Pwc"},
+                {image: "/images/used/ge.svg", description: "Ge"}
+            ]
+        }
+    }
+
     render() {
         return(
             <div id="as-used-by-block">
                 <span>As used By</span>
-                <img src="/images/used/microsoft.svg" alt="Microsoft"/>
-                <img src="/images/used/sap.svg" alt="Sap"/>
-                <img src="/images/used/metlife.svg" alt="MetLife"/>
-                <img src="/images/used/intel.svg" alt="Intel"/>
-                <img src="/images/used/boeing.svg" alt="Boeing"/>
-                <img src="/images/used/avery.svg" alt="Avery"/>
-                <img src="/images/used/pwc.svg" alt="Pwc"/>
-                <img src="/images/used/ge.svg" alt="Ge"/>
+                {this.state.items.map((item, id) => {
+                    return (
+                        <div key={id}>
+                            <img src={item.image} alt={item.description} />
+                        </div>
+                    )
+                })}
             </div>
         );
     }
