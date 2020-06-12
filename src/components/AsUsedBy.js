@@ -5,14 +5,14 @@ class AsUsedBy extends Component {
         super(props);
             this.state = {
                 items: [
-                {image: "/images/used/microsoft.svg", description: "Microsoft"},
-                {image: "/images/used/sap.svg", description: "Sap"},
-                {image: "/images/used/metlife.svg", description: "MetLife"},
-                {image: "/images/used/intel.svg", description: "Intel"},
-                {image: "/images/used/boeing.svg", description: "Boeing"},
-                {image: "/images/used/avery.svg", description: "Avery"},
-                {image: "/images/used/pwc.svg", description: "Pwc"},
-                {image: "/images/used/ge.svg", description: "Ge"}
+                {image: "/images/used/microsoft.svg", link: "Microsoft"},
+                {image: "/images/used/sap.svg", link: "Sap"},
+                {image: "/images/used/metlife.svg", link: "MetLife"},
+                {image: "/images/used/intel.svg", link: "Intel"},
+                {image: "/images/used/boeing.svg", link: "Boeing"},
+                {image: "/images/used/avery.svg", link: "Avery"},
+                {image: "/images/used/pwc.svg", link: "Pwc"},
+                {image: "/images/used/ge.svg", link: "Ge"}
             ]
         }
     }
@@ -24,7 +24,7 @@ class AsUsedBy extends Component {
                 {this.state.items.map((item, id) => {
                     return (
                         <div key={id}>
-                            <img src={item.image} alt={item.description} />
+                            <img src={item.image} alt={item.link} />
                         </div>
                     )
                 })}
