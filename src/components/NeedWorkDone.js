@@ -24,7 +24,7 @@ class NeedWorkDone extends Component {
                                 <div key={id} className="col">
                                     <img src={item.image} alt={item.description} />
                                     <h3>{item.title}</h3>
-                            <       p>{item.paragraph}</p>
+                                    <p>{item.paragraph}</p>
                                 </div>
                             )
                         })}
