@@ -50,4 +50,3 @@ class MainCarousel extends Component{
 }
 
 export default MainCarousel;
-
