@@ -1,68 +1,40 @@
 import React, { Component } from 'react';
 
 class Favorite extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            items: [
+                {link: "/images/crowd/website.png", title: "Website Development", description: "From $300 USD"},
+                {link: "/images/crowd/graphic.png", title: "Graphic Design", description: "From $100 USD"},
+                {link: "/images/crowd/design.png", title: "Logo Design", description: "From $50 USD"},
+                {link: "/images/crowd/marketing.png", title: "Marketing", description: "From $150 USD"},
+                {link: "/images/crowd/writing.png", title: "Writing", description: "From $50 USD"},
+                {link: "/images/crowd/mobile.png", title: "Mobile App", description: "From $50 USD / hour"}
+            ]
+        }
+    }
+
     render () {
         return (
             <div id="favorite">
                 <h2>Crowd favorites<br/>Here are some of our most popular projects:</h2>
                 <div className="container">
                     <div className="row">
-                        <div className="col">
-                            <div className="crowd-box">
-                                <img src="/images/crowd/website.png" alt="Website"/>
-                                <div className="price-box">
-                                    <h5>Website Development</h5>
-                                    <span>From $300 USD</span>
+                        {this.state.items.map((item, id) => {
+                            return(
+                            <div key={id} className="col-md-4">
+                                <div className="crowd-box">
+                                    <img src={item.link} alt={item.title}/>
+                                    <div className="price-box">
+                                        <h5>{item.title}</h5>
+                                        <span>{item.description}</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="col">
-                            <div className="crowd-box">
-                                <img src="/images/crowd/graphic.png" alt="Graphic"/>
-                                <div className="price-box">
-                                    <h5>Graphic Design</h5>
-                                    <span>From $100 USD</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col">
-                            <div className="crowd-box">
-                                <img src="/images/crowd/design.png" alt="Design"/>
-                                <div className="price-box">
-                                    <h5>Logo Design</h5>
-                                    <span>From $50 USD</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col">
-                            <div className="crowd-box">
-                                <img src="/images/crowd/marketing.png" alt="Marketing"/>
-                                <div className="price-box">
-                                    <h5>Marketing</h5>
-                                    <span>From $150 USD</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col">
-                            <div className="crowd-box">
-                                <img src="/images/crowd/writing.png" alt="Writing"/>
-                                <div className="price-box">
-                                    <h5>Writing</h5>
-                                    <span>From $50 USD</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col">
-                            <div className="crowd-box">
-                                <img src="/images/crowd/mobile.png" alt="Mobile"/>
-                                <div className="price-box">
-                                    <h5>Mobile App</h5>
-                                    <span>From $50 USD / hour</span>
-                                </div>
-                            </div>
-                        </div>
+                            )
+                        })}
                     </div>
                 </div>
             </div>

@@ -1,92 +1,203 @@
 import React, { Component } from 'react';
 
 class FooterSection extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            items: [
+                {link: "/images/footer/freelancer-logo-light.svg", alter: "LogoLight"},
+            ],
+            details: [
+                {icon: "fas fa-archway", title: "US (International) / English"},
+                {icon: "fas fa-question-circle", title: "Help & Support"}
+            ],
+            object: [
+                {head: "Freelancer"},
+                {referTo: "Categories"},
+                {referTo: "Projects"},
+                {referTo: "Contests"},
+                {referTo: "Freelancers"},
+                {referTo: "Enterprise"},
+                {referTo: "Preferred Freelancer Program"},
+                {referTo: "Project Management"},
+                {referTo: "Local Jobs"},
+                {referTo: "Showcase"},
+                {referTo: "API For Developers"},
+                {referTo: "Get Verified"},
+            ],
+            about: [
+                {head: "About Us"},
+                {referTo: "About Us"},
+                {referTo: "How it works"},
+                {referTo: "Security"},
+                {referTo: "Investor"},
+                {referTo: "Sitemap"},
+                {referTo: "Quotes"},
+                {referTo: "News"}
+            ],
+            term:  [
+                {head: "Terms"},
+                {referTo: "Privacy Policy"},
+                {referTo: "Term and Conditions"},
+                {referTo: "Copyright Policy"},
+                {referTo: "Code of Conduct"},
+                {referTo: "Fees and Charges"}
+            ],
+            app: [
+                {head: "Apps"},
+                {link: "/images/footer/app-store.svg", alter: "AppStore"},
+                {link: "/images/footer/google-play.svg", alter: "GooglePlay"}
+            ],
+            font: [
+                {icon: "fab fa-facebook"},
+                {icon: "fab fa-twitter"},
+                {icon: "fab fa-youtube"},
+                {icon: "fab fa-instagram"}
+            ],
+            desc: [
+                {head: "44,862,749"},
+            ],
+            regis: [
+                {label: "Registered Users"}
+            ],
+            total: [
+                {label: "Total Jobs Posted"}
+            ],
+            paragraph: [
+                {p: "Freelancer ® is a registered Trademark of Freelancer Technology Pty Limited (ACN 141 959 042) Copyright © 2020 Freelancer Technology Pty Limited (ACN 141 959 042)"}
+            ]
+        }
+    }
+
     render() {
         return (
             <div className="footer">
                 <div className="container">
                     <div className="row">
                         <div className="col-md-4">
-                            <img src="/images/footer/freelancer-logo-light.svg" alt="LogoLight"/>
-                            <div className="support">
-                                <a href="/"><i className="fas fa-archway"></i>US (International) / English</a>
-                                <a href="/"><i className="fas fa-question-circle"></i>Help & Support</a>
-                            </div>
+                            {this.state.items.map((item, id) => {
+                                return (
+                                    <div key={id}>
+                                        <img src={item.link} alt={item.alter}/>
+                                    </div> 
+                                )
+                            })}
+                            {this.state.details.map((item, id) => {
+                                return (
+                                    <div key={id}>
+                                        <div className="support">
+                                            <a href="/"><i className={item.icon}></i>{item.title}</a>
+                                        </div>
+                                    </div> 
+                                )
+                            })}
+                            
+                            
                         </div>
 
                         <div className="col-md-2">
-                            <span>Freelancer</span>
-                            <div className="links">
-                                <a href="/">Categories</a>
-                                <a href="/">Projects</a>
-                                <a href="/">Contests</a>
-                                <a href="/">Freelancers</a>
-                                <a href="/">Enterprise</a>
-                                <a href="/">Preferred Freelancer Program</a>
-                                <a href="/">Project Management</a>
-                                <a href="/">Local Jobs</a>
-                                <a href="/">Showcase</a>
-                                <a href="/">API For Developers</a>
-                                <a href="/">Get Verified</a>
-                            </div>
+                            {this.state.object.map((obj, id) => {
+                                return (
+                                    <div key={id}>
+                                        <span>{obj.head}</span>
+                                        <div className="links">
+                                            <a href="/">{obj.referTo}</a>
+                                        </div>
+                                    </div>
+                                )
+                            })}
                         </div>
 
                         <div className="col-md-2">
-                            <span>About</span>
-                            <div className="links">
-                                <a href="/">About Us</a>
-                                <a href="/">How it Works</a>
-                                <a href="/">Security</a>
-                                <a href="/">Investor</a>
-                                <a href="/">Sitemap</a>
-                                <a href="/">Quotes</a>
-                                <a href="/">News</a>
-                            </div>
+                            {this.state.about.map((obj, id) => {
+                                return (
+                                    <div key={id}>
+                                        <span>{obj.head}</span>
+                                        <div className="links">
+                                            <a href="/">{obj.referTo}</a>
+                                        </div>
+                                    </div>
+                                )
+                            })}
                         </div>
 
                         <div className="col-md-2">
-                            <span>Terms</span>
-                            <div className="links">
-                                <a href="/">Privacy Policy</a>
-                                <a href="/">Terms and Conditions</a>
-                                <a href="/">Copyright Policy</a>
-                                <a href="/">Code of Conduct</a>
-                                <a href="/">Fees and Charges</a>
-                            </div>
+                            {this.state.term.map((obj, id) => {
+                                return (
+                                    <div key={id}>
+                                        <span>{obj.head}</span>
+                                        <div className="links">
+                                            <a href="/">{obj.referTo}</a>
+                                        </div>
+                                    </div>
+                                )
+                            })}
                         </div>
 
                         <div className="col-md-2">
-                            <span>Apps</span>
-                            <div className="app">
-                                <img src="/images/footer/app-store.svg" alt="AppStore"/>
-                                <img src="/images/footer/google-play.svg" alt="GooglePlay"/>
-                            </div>
-                            <div className="font-awe">
-                                <i className="fab fa-facebook"></i>
-                                <i className="fab fa-twitter"></i>
-                                <i className="fab fa-youtube"></i>
-                                <i className="fab fa-instagram"></i>
+                            {this.state.app.map((item, id) => {
+                                return (
+                                    <div key={id}>
+                                        <span>{item.head}</span>
+                                        <div className="app">
+                                            <img src={item.link} alt={item.alter} />
+                                        </div>
+                                    </div>
+                                )
+                            })}
+                            <div className="icons">
+                                {this.state.font.map((item, id) => {
+                                    return (
+                                        <div key={id}>
+                                                <i className={item.icon}></i>
+                                            </div>
+                                    )
+                                })}
                             </div>
                         </div>
+
+                            
                     </div>
+
                     <div className="dropdown-divider"></div>
+
                     <div className="row">
                         <div className="col-md-3">
-                            <div className="footer-desc">
-                                <h6>44,862,749</h6>
-                                <label>Registered Users</label>
-                            </div>
+                            {this.state.desc.map((item, id) => {
+                                return (
+                                    <div key={id} className="footer-desc">
+                                        <h6>{item.head}</h6>
+                                    </div>)
+                            })}
+                            {this.state.regis.map((item, id) => {
+                                return (
+                                    <div key={id} className="footer-desc">
+                                        <label>{item.label}</label>
+                                    </div>)
+                            })}
                         </div>
                         <div className="col-md-3">
-                            <div className="footer-desc">
-                                <h6>17,963,596</h6>
-                                <label>Total Jobs Posted</label>
-                            </div>
+                            {this.state.desc.map((item, id) => {
+                                return (
+                                    <div key={id} className="footer-desc">
+                                        <h6>{item.head}</h6>
+                                    </div>)
+                            })}
+                            {this.state.total.map((item, id) => {
+                                return (
+                                    <div key={id} className="footer-desc">
+                                        <label>{item.label}</label>
+                                    </div>)
+                            })}
                         </div>
                         <div className="col-md-6">
-                            <div className="footer-desc">
-                                <p>Freelancer ® is a registered Trademark of Freelancer Technology Pty Limited (ACN 141 959 042) Copyright © 2020 Freelancer Technology Pty Limited (ACN 141 959 042).</p>
-                            </div>
+                            {this.state.paragraph.map((item, id) => {
+                                return (
+                                    <div key={id} className="footer-desc">
+                                        <p>{item.p}</p>
+                                    </div>)
+                            })}
                         </div>
                     </div>
                 </div>

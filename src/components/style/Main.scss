@@ -286,7 +286,7 @@ body {
         text-align: center;
         margin-bottom: 40px;
     }
-    .col {
+    .col-md-3 {
         a {
             display: block;
             padding: 0 0 7px;
@@ -313,14 +313,12 @@ body {
     .col-md-4 {
         img {
             width: 40%;
-            margin-bottom: 25px;
             cursor: pointer;
             padding: 30px 0;
         }
         .support {
+            padding: 20px 0;
             a {
-                display: block;
-                margin-bottom: 15px;
                 color: #FFF;
             }
             i {
@@ -346,35 +344,35 @@ body {
             }
         }
         .app {
-            margin-top: 7px;
             img {
                 margin-bottom: 20px;
                 cursor: pointer;
             }
         }
-        .font-awe {
-            color: #FFF;
-            font-size: 20px;
+        .icons {
+            display: flex;
             i {
                 padding-right: 20px;
+                color: #FFF;
+                font-size: 20px;
                 cursor: pointer;
                 transition: .3s ease-in-out;
             }
-        }
-        .fa-facebook:hover {
-            color: #4267B2;
-        }
-        .fa-twitter:hover {
-            color: #1DA1F2;
-        }
-        .fa-youtube:hover {
-            color: #F00;
-        }
-        .fa-instagram:hover {
-            color: #C13584;
-        }
-        .footer-desc {
-            color: #FFF;
+            .fa-facebook:hover {
+                color: #4267B2;
+            }
+            .fa-twitter:hover {
+                color: #1DA1F2;
+            }
+            .fa-youtube:hover {
+                color: #F00;
+            }
+            .fa-instagram:hover {
+                color: #C13584;
+            }
+            .footer-desc {
+                color: #FFF;
+            }
         }
     }
     .dropdown-divider {

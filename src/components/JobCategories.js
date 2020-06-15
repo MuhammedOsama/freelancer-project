@@ -1,70 +1,75 @@
 import React, { Component } from 'react';
 
 class JobCategories extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            items : [
+                {icon: "fas fa-caret-right", title: "PHP"},
+                {icon: "fas fa-caret-right", title: "Graphic Design"},
+                {icon: "fas fa-caret-right", title: "Website Design"},
+                {icon: "fas fa-caret-right", title: "HTML"},
+                {icon: "fas fa-caret-right", title: "Logo Design"},
+                {icon: "fas fa-caret-right", title: "PhotoShop"},
+                {icon: "fas fa-caret-right", title: "WordPress"},
+                {icon: "fas fa-caret-right", title: "Article Writing"},
+                {icon: "fas fa-caret-right", title: "Javascript"},
+                {icon: "fas fa-caret-right", title: "Mobile App Development"},
+                {icon: "fas fa-caret-right", title: "Software Architecture"},
+                {icon: "fas fa-caret-right", title: "Data Entry"},
+                {icon: "fas fa-caret-right", title: "Android"},
+                {icon: "fas fa-caret-right", title: "Excel"},
+                {icon: "fas fa-caret-right", title: "Css"},
+                {icon: "fas fa-caret-right", title: "HTML5"},
+                {icon: "fas fa-caret-right", title: "Internet Marketing"},
+                {icon: "fas fa-caret-right", title: "Copywriting"},
+                {icon: "fas fa-caret-right", title: "SEO"},
+                {icon: "fas fa-caret-right", title: "iPhone"},
+                {icon: "fas fa-caret-right", title: "Research Writing"},
+                {icon: "fas fa-caret-right", title: "Translation"},
+                {icon: "fas fa-caret-right", title: "Java"},
+                {icon: "fas fa-caret-right", title: "MySQL"},
+                {icon: "fas fa-caret-right", title: "Ghostwriting"},
+                {icon: "fas fa-caret-right", title: "Marketing"},
+                {icon: "fas fa-caret-right", title: "Date Processing"},
+                {icon: "fas fa-caret-right", title: "Technical Writing"},
+                {icon: "fas fa-caret-right", title: "Python"},
+                {icon: "fas fa-caret-right", title: "Social Media Marketing"},
+                {icon: "fas fa-caret-right", title: "Research"},
+                {icon: "fas fa-caret-right", title: "Link Building"},
+                {icon: "fas fa-caret-right", title: "C# Programming"},
+                {icon: "fas fa-caret-right", title: "3D Modelling"},
+                {icon: "fas fa-caret-right", title: "Web Search"},
+                {icon: "fas fa-caret-right", title: "Web Scraping"},
+                {icon: "fas fa-caret-right", title: "3D Rendering"},
+                {icon: "fas fa-caret-right", title: "Linux"},
+                {icon: "fas fa-caret-right", title: "Video Services"},
+                {icon: "fas fa-caret-right", title: "C++ Programming"},
+                {icon: "fas fa-caret-right", title: "eCommerce"},
+                {icon: "fas fa-caret-right", title: "Banner Design"},
+                {icon: "fas fa-caret-right", title: "Illustration"},
+                {icon: "fas fa-caret-right", title: "Proofreading"},
+                {icon: "fas fa-caret-right", title: "3D Animation"},
+                {icon: "fas fa-caret-right", title: "Content Writing"},
+                {icon: "fas fa-caret-right", title: "See All"}
+            ]
+        }
+    }
+
     render() {
         return(
             <div className="job">
                 <h2>Browse top job categories</h2>
                 <div className="container">
                     <div className="row">
-                        <div className="col">
-                            <a href="/"><i className="fas fa-caret-right"></i>PHP</a>
-                            <a href="/"><i className="fas fa-caret-right"></i>Graphic Design</a>
-                            <a href="/"><i className="fas fa-caret-right"></i>Website Design</a>
-                            <a href="/"><i className="fas fa-caret-right"></i>HTML</a>
-                            <a href="/"><i className="fas fa-caret-right"></i>Logo Design</a>
-                            <a href="/"><i className="fas fa-caret-right"></i>PhotoShop</a>
-                            <a href="/"><i className="fas fa-caret-right"></i>WordPress</a>
-                            <a href="/"><i className="fas fa-caret-right"></i>Article Writing</a>
-                            <a href="/"><i className="fas fa-caret-right"></i>Javascript</a>
-                            <a href="/"><i className="fas fa-caret-right"></i>Mobile App Development</a>
-                            <a href="/"><i className="fas fa-caret-right"></i>Software Architecture</a>
-                            <a href="/"><i className="fas fa-caret-right"></i>Data Entry</a>
-                        </div>
-                        
-                        <div className="col">
-                            <a href="/"><i className="fas fa-caret-right"></i>Android</a>
-                            <a href="/"><i className="fas fa-caret-right"></i>Excel</a>
-                            <a href="/"><i className="fas fa-caret-right"></i>Css</a>
-                            <a href="/"><i className="fas fa-caret-right"></i>HTML5</a>
-                            <a href="/"><i className="fas fa-caret-right"></i>Internet Marketing</a>
-                            <a href="/"><i className="fas fa-caret-right"></i>Copywriting</a>
-                            <a href="/"><i className="fas fa-caret-right"></i>SEO</a>
-                            <a href="/"><i className="fas fa-caret-right"></i>iPhone</a>
-                            <a href="/"><i className="fas fa-caret-right"></i>Research Writing</a>
-                            <a href="/"><i className="fas fa-caret-right"></i>Translation</a>
-                            <a href="/"><i className="fas fa-caret-right"></i>Java</a>
-                            <a href="/"><i className="fas fa-caret-right"></i>MySQL</a>
-                        </div>
-                        
-                        <div className="col">
-                            <a href="/"><i className="fas fa-caret-right"></i>Ghostwriting</a>
-                            <a href="/"><i className="fas fa-caret-right"></i>Marketing</a>
-                            <a href="/"><i className="fas fa-caret-right"></i>Date Processing</a>
-                            <a href="/"><i className="fas fa-caret-right"></i>Technical Writing</a>
-                            <a href="/"><i className="fas fa-caret-right"></i>Python</a>
-                            <a href="/"><i className="fas fa-caret-right"></i>Social Media Marketing</a>
-                            <a href="/"><i className="fas fa-caret-right"></i>Research</a>
-                            <a href="/"><i className="fas fa-caret-right"></i>Link Building</a>
-                            <a href="/"><i className="fas fa-caret-right"></i>C/ Programming</a>
-                            <a href="/"><i className="fas fa-caret-right"></i>3D Modelling</a>
-                            <a href="/"><i className="fas fa-caret-right"></i>Web Search</a>
-                            <a href="/"><i className="fas fa-caret-right"></i>Web Scraping</a>
-                        </div>
-                        
-                        <div className="col">
-                            <a href="/"><i className="fas fa-caret-right"></i>3D Rendering</a>
-                            <a href="/"><i className="fas fa-caret-right"></i>Linux</a>
-                            <a href="/"><i className="fas fa-caret-right"></i>Video Services</a>
-                            <a href="/"><i className="fas fa-caret-right"></i>C++ Programming</a>
-                            <a href="/"><i className="fas fa-caret-right"></i>eCommerce</a>
-                            <a href="/"><i className="fas fa-caret-right"></i>Banner Design</a>
-                            <a href="/"><i className="fas fa-caret-right"></i>Illustration</a>
-                            <a href="/"><i className="fas fa-caret-right"></i>Proofreading</a>
-                            <a href="/"><i className="fas fa-caret-right"></i>3D Animation</a>
-                            <a href="/"><i className="fas fa-caret-right"></i>Content Writing</a>
-                            <a href="/"><i className="fas fa-caret-right"></i>See All</a>
-                        </div>
+                        {this.state.items.map((item, id) => {
+                            return(
+                                <div key={id} className="col-md-3">
+                                    <a href="/"><i className={item.icon}></i>{item.title}</a>
+                                </div>
+                            )
+                        })}
                     </div>
                 </div>
             </div>
