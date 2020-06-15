@@ -6,8 +6,8 @@ class API extends Component {
         super(props);
         this.state = {
             items: [
-                {link: "/images/api/professionals.png", alter: "Professionals", span: "FREELANCER API", header: "43 million professionals on demand", paragraph: "Why hire people when you can simply integrate our talented cloud workforce instead?", button: "View Documentation"},
-                {link: "/images/api/company.png", alter: "Company", span: "FREELANCER ENTERPRISE", header: "Company budget? Get more done for less", paragraph: "Use our workforce of 43 million to help your business achieve more.", button: "Contact Us"}
+                {image: "/images/api/professionals.png", imageDesc: "Professionals", title: "FREELANCER API", details: "43 million professionals on demand", paragraph: "Why hire people when you can simply integrate our talented cloud workforce instead?", button: "View Documentation"},
+                {image: "/images/api/company.png", imageDesc: "Company", title: "FREELANCER ENTERPRISE", details: "Company budget? Get more done for less", paragraph: "Use our workforce of 43 million to help your business achieve more.", button: "Contact Us"}
             ]
         }
     }
@@ -20,22 +20,22 @@ class API extends Component {
                         {this.state.items.map((item, id) => {
                             return(
                                 <div key={id} className="col">
-                                    <img src={item.link} alt={item.alter} />
+                                    <img src={item.image} alt={item.imageDesc} />
                                     <div className="api-price">
-                                        <span>{item.span}</span>
-                                        <h3>{item.header}</h3>
+                                        <span>{item.title}</span>
+                                        <h3>{item.details}</h3>
                                         <p>{item.paragraph}</p>
                                         <button>{item.button}</button>
                                     </div>
                                 </div>,
                                 <div key={id} className="col">    
                                     <div className="enter-price">
-                                        <span>{item.span}</span>
-                                        <h3>{item.header}</h3>
+                                        <span>{item.title}</span>
+                                        <h3>{item.details}</h3>
                                         <p>{item.paragraph}</p>
                                         <button>{item.button}</button>
                                     </div>
-                                    <img src={item.link} alt={item.alter} />
+                                    <img src={item.image} alt={item.imageDesc} />
                                 </div>
                             )
                         })}

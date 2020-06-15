@@ -8,9 +8,9 @@ class FooterSection extends Component {
             items: [
                 {link: "/images/footer/freelancer-logo-light.svg", alter: "LogoLight"},
             ],
-            para: [
-                {awesome: "fas fa-archway", title: "US (International) / English"},
-                {awesome: "fas fa-question-circle", title: "Help & Support"}
+            details: [
+                {icon: "fas fa-archway", title: "US (International) / English"},
+                {icon: "fas fa-question-circle", title: "Help & Support"}
             ],
             object: [
                 {head: "Freelancer"},
@@ -50,10 +50,10 @@ class FooterSection extends Component {
                 {link: "/images/footer/google-play.svg", alter: "GooglePlay"}
             ],
             font: [
-                {awesome: "fab fa-facebook"},
-                {awesome: "fab fa-twitter"},
-                {awesome: "fab fa-youtube"},
-                {awesome: "fab fa-instagram"}
+                {icon: "fab fa-facebook"},
+                {icon: "fab fa-twitter"},
+                {icon: "fab fa-youtube"},
+                {icon: "fab fa-instagram"}
             ],
             desc: [
                 {head: "44,862,749"},
@@ -83,11 +83,11 @@ class FooterSection extends Component {
                                     </div> 
                                 )
                             })}
-                            {this.state.para.map((item, id) => {
+                            {this.state.details.map((item, id) => {
                                 return (
                                     <div key={id}>
                                         <div className="support">
-                                            <a href="/"><i className={item.awesome}></i>{item.title}</a>
+                                            <a href="/"><i className={item.icon}></i>{item.title}</a>
                                         </div>
                                     </div> 
                                 )
@@ -150,7 +150,7 @@ class FooterSection extends Component {
                                 {this.state.font.map((item, id) => {
                                     return (
                                         <div key={id}>
-                                                <i className={item.awesome}></i>
+                                                <i className={item.icon}></i>
                                             </div>
                                     )
                                 })}
