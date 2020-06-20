@@ -42,9 +42,11 @@ class Categories extends Component {
                     <div className="row">
                         {this.state.items.map((item, id) => {
                             return (
-                                <div key={id} className="col-1 mb-5">
-                                    <img src={item.image} alt={item.description} />
-                                    <a href="/">{item.title}</a>
+                                <div key={id} className="col-4 col-md-3 col-lg-1">
+                                    <div className="category">
+                                        <img src={item.image} alt={item.description} />
+                                        <a href="/">{item.title}</a>
+                                    </div>
                                 </div>
                             )
                         })}

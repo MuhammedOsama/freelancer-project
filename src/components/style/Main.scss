@@ -10,53 +10,82 @@ body {
 
 // Start Navbar
 #header {
-    a {
-        color: #111;
-        transition: 0.2s;
-        &:hover {
-            color: $secondColor;
+    padding: 15px;
+    .jobs {
+        display: inline;
+        img {
+            width: 12%;
+            @media (max-width: 767px) {
+                width: 30%;
+            }
+        }
+        a {
+            margin: 20px;
+            color: #000;
+            font-size: 17px;
+            font-weight: 500;
+            transition: .3s ease-in-out;
+            &:hover {
+                text-decoration: none;
+                color: $secondColor;
+            }
+            @media (max-width: 767px) {
+                display: none;
+            }
         }
     }
-    img {
-        width: 10%;
-        @media (max-width: 1024px) {
-            width: 15%;
-        }
-    }
-    .nav-links {
-        margin-left: 30px;
-        font-size: 16px;
-    }
-    .links {
-        font-size: 16px;
-        .login,
-        .signup {
-            padding-right: 30px;
+    .contact {
+        float: right;
+        display: inline-block;
+        a {
+            margin: 20px;
+            color: #000;
+            font-size: 17px;
+            font-weight: 500;
+            transition: .3s ease-in-out;
+            &:hover {
+                text-decoration: none;
+                color: $secondColor;
+            }
+            @media (max-width: 767px) {
+                margin-right: 10px;
+            }
         }
         button {
+            padding: 5px;
+            font-size: 15px;
+            color: #FFF;
             background-color: $mainColor;
             border: 0;
-            color: #FFF;
-            padding: 0px 10px;
             &:hover {
                 background-color: $mainColor_hover;
+            }
+            @media (max-width: 767px) {
+                display: none;
             }
         }
     }
 }
 
 // End Navbar
-// Start Carousel
+// Start MainCarousel
 .main-carousel {
     position: relative;
     overflow: hidden;
     .main-carousel-caption {
         position: absolute;
         top: 10em;
-        left: 5em;
+        left: 5rem;
         width: 580px;
         color: #FFF;
-        z-index: 1;
+        z-index: 10;
+        @media (min-width: 1900px) {
+            left: 25rem;
+            margin-top: 90px;
+        }
+        @media (max-width: 800px) {
+            display: none;
+        }
         h1 {
             font-size: 2.5625rem;
             font-weight: bold;
@@ -91,9 +120,15 @@ body {
         }
     }
     .carousel-indicators {
-        right: 84%;
+        right: 80%;
         bottom: 5%;
         margin: 0;
+        @media (min-width: 1900px) {
+            display: none;
+        }
+        @media (max-width: 800px) {
+            display: none;
+        }
     }
     .carousel-control-prev,
     .carousel-control-next {
@@ -109,9 +144,15 @@ body {
     .carousel-caption {
         font-size: 18px;
         font-weight: 500;
-        text-align: right;
+        padding-left: 50%;
+        bottom: 5%;
+        @media (min-width: 1920px) {
+            display: none;
+        }
+        @media (max-width: 800px) {
+            display: none;
+        }
         label {
-            bottom: 5%;
             width: 60px;
             height: 60px;
             line-height: 60px;
@@ -123,19 +164,40 @@ body {
     }
 }
 
-// End Carousel
+// End MainCarousel
 // Start AsUsedBy
-#as-used-by-block {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 35px;
-    border-bottom: 1px solid #DDD;
-    margin-bottom: 80px;
+#used-by {
+    max-width: 100%;
+    border-bottom: 1px solid #dedede;
+    img {
+        max-width: 100%;
+        max-height: 35px;
+    }
+    .main-row {
+        padding: 32px 0;
+        @media (max-width: 768px) {
+            display: block;
+        }
+    }
     span {
         font-size: 20px;
-        font-weight: 500;
-        color: #777;
+        color: #4d525b;
+        @media (max-width: 768px) {
+            font-size: 16px;
+        }
+    }
+    .column-2 {
+        flex: 6;
+    }
+    .column-1 {
+        flex: 1;
+    }
+    .col-md-2,
+    .column-4,
+    .col-md-1 {
+        @media (max-width: 768px) {
+            margin-top: 16px;
+        }
     }
 }
 
@@ -147,13 +209,21 @@ body {
         margin-bottom: 60px;
         font-weight: 700;
     }
-    img,
+    img {
+        width: 70%;
+        @media (max-width: 768px) {
+            margin-bottom: 20px;
+        }
+    }
     h3 {
         margin-bottom: 25px;
     }
     p {
         font-size: 18px;
         font-weight: 500;
+        @media (min-width: 374px) {
+            margin-bottom: 30px;
+        }
     }
 }
 
@@ -177,6 +247,9 @@ body {
         margin-top: 10px;
         font-size: 20px;
         font-weight: 400;
+        @media (min-width: 374px) {
+            margin-bottom: 35px;
+        }
     }
 }
 
@@ -193,6 +266,8 @@ body {
         padding: 30px 0;
     }
     .crowd-box {
+        box-shadow: 7px 7px 8px rgb(224, 222, 222);
+        box-shadow: -7px -7px -8px rgb(224, 222, 222);
         background: #FFF;
         margin-bottom: 40px;
         img {
@@ -221,15 +296,29 @@ body {
     }
     .row {
         cursor: pointer;
-        img {
-            display: block;
-            margin: auto;
-        }
-        a {
-            margin-top: 5px;
-            display: block;
-            font-size: 13px;
-            color: #000;
+        .category {
+            margin-bottom: 15px;
+            @media(max-width: 768px) {
+                background-color: #F7F7F7;
+                margin: 5px;
+                padding: 30px;
+                a {
+                    font-size: 8px;
+                }
+            }
+            @media(max-width: 414px) {
+                padding: 15px;
+            }
+            img {
+                display: block;
+                margin: auto;
+            }
+            a {
+                margin-top: 5px;
+                display: block;
+                font-size: 13px;
+                color: #000;
+            }
         }
     }
 }
@@ -237,43 +326,56 @@ body {
 // End Categories
 //  Start API
 .api-section {
-    margin-bottom: 80px;
-    .col {
-        display: flex;
-        background-color: $cardColor;
+    margin-bottom: 120px;
+    display: flex;
+    @media (max-width: 768px) {
+        display: none;
+    }
+    img {
+        width: 110%;
+        margin-top: 20px;
+    }
+    .first-card {
         padding: 20px;
-        margin-left: 20px;
+        display: flex;
+        margin-right: 30px;
+        background-color: #DDD;
         border-radius: 5px;
-        img {
-            width: 52%;
+        span {
+            color: $secondColor;
         }
-        .api-price {
-            text-align: right;
-            span {
-                color: $secondColor;
-            }
-            button {
-                padding: 7px;
-                background-color: $secondColor;
-                color: #FFF;
-                font-size: 15px;
-                font-weight: bold;
-                border: 2px solid $secondColor;
-            }
+        h4 {
+            font-weight: 600;
         }
-        .enter-price {
-            span {
-                color: $secondColor;
-            }
-            button {
-                padding: 7px;
-                margin-top: 24px;
-                background-color: $secondColor;
-                color: #FFF;
-                font-size: 15px;
-                font-weight: bold;
-                border: 2px solid $secondColor;
-            }
+    }
+    .api-price {
+        text-align: right;
+        button {
+            padding: 8px;
+            font-weight: 600;
+            background-color: $btnColor;
+            border: 1px solid $btnColor;
+            color: #FFF;
+        }
+    }
+    .second-card {
+        padding: 20px;
+        display: flex;
+        background-color: #DDD;
+        border-radius: 5px;
+        span {
+            color: $secondColor;
+        }
+        h4 {
+            font-weight: 600;
+        }
+        button {
+            margin-top: 22px;
+            padding: 8px;
+            font-weight: 600;
+            background-color: $btnColor;
+            border: 1px solid $btnColor;
+            color: #FFF;
         }
     }
 }
@@ -308,27 +410,38 @@ body {
 // End JobCategories
 // Start FooterSection
 .footer {
-    height: 650px;
     background-color: #161e2c;
-    .col-md-4 {
+    .col-lg-4 {
         img {
             width: 40%;
             cursor: pointer;
             padding: 30px 0;
+            @media (min-width: 768px) {
+                width: 25%;
+            }
         }
         .support {
             padding: 20px 0;
+            @media (min-width: 374px) {
+                font-size: 15px;
+            }
             a {
                 color: #FFF;
             }
             i {
                 font-size: 20px;
                 margin-right: 15px;
+                @media (min-width: 374px) {
+                    font-size: 15px;
+                }
             }
         }
     }
-    .col-md-2 {
+    .col-lg-2 {
         padding-top: 30px;
+        @media (min-width: 374px) {
+            font-size: 15px;
+        }
         span {
             color: #FFF;
             font-size: 18px;
@@ -339,14 +452,33 @@ body {
             display: block;
             color: #999;
             transition: .3s ease-in-out;
+            @media (min-width: 374px) {
+                margin-top: 5px;
+            }
             &:hover {
                 color: #FFF;
             }
         }
-        .app {
-            img {
-                margin-bottom: 20px;
-                cursor: pointer;
+        #apps_block {
+            .apps {
+                .app {
+                    &:last-of-type {
+                        margin-left: 20px;
+                        @media(min-width: 414px) {
+                            margin-left: 0;
+                        }
+                    }
+                    img {
+                        display: inline-block;
+                        margin-bottom: 20px;
+                        cursor: pointer;
+                    }
+                }
+                @media(max-width: 414px) {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                }
             }
         }
         .icons {
@@ -357,6 +489,9 @@ body {
                 font-size: 20px;
                 cursor: pointer;
                 transition: .3s ease-in-out;
+                @media (max-width: 768px) {
+                    padding-right: 85px;
+                }
             }
             .fa-facebook:hover {
                 color: #4267B2;
@@ -382,15 +517,22 @@ body {
     .footer-desc {
         color: #FFF;
     }
-    .col-md-3 {
+    .col-lg-3 {
+        margin-bottom: 50px;
+        @media (max-width: 768px) {
+            display: none;
+        }
         h6 {
             font-size: 15px;
         }
     }
-    .col-md-6 {
+    .col-lg-6 {
+        @media (min-width: 374px) {
+            bottom: 25px;
+        }
         .footer-desc {
             font-size: 12px;
-            padding-left: 80px;
+            padding: 20px 0;
         }
     }
 }

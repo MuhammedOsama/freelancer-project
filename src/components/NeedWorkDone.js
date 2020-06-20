@@ -21,7 +21,7 @@ class NeedWorkDone extends Component {
                     <div className="row">
                         {this.state.items.map((item, id) => {
                             return (
-                                <div key={id} className="col">
+                                <div key={id} className="col-md-4">
                                     <img src={item.image} alt={item.description} />
                                     <h3>{item.title}</h3>
                                     <p>{item.paragraph}</p>
