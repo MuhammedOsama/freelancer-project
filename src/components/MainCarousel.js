@@ -5,16 +5,16 @@ class MainCarousel extends Component{
   render (){
         return (
             <div className="main-carousel d-none d-md-block">
-              <div className="main-carousel-caption">
+              <div className="main-carousel-caption container">
                   <h1>Hire expert freelancers for any job, online</h1>
                   <p className="lead">Millions of small businesses use Freelancer to turn their ideas into reality...</p>
                   <button>I want Hire</button>
                   <button>I want Work</button>
               </div>
-              <Carousel>
+              <Carousel fade="true">
                 <Carousel.Item>
                 <img className="d-block w-100" src="/images/carousel/bg1.jpg" alt="First" />
-                <Carousel.Caption>
+                <Carousel.Caption className="carousel-caption container">
                   <span>This Mobile Design Cost </span>
                   <label>$150</label>
                 </Carousel.Caption>
@@ -22,7 +22,7 @@ class MainCarousel extends Component{
 
                 <Carousel.Item>
                   <img className="d-block w-100" src="/images/carousel/bg2.jpg" alt="Second" />
-                <Carousel.Caption className="carousel-caption">
+                <Carousel.Caption className="carousel-caption container">
                   <span>This Architectural Design Cost </span>
                   <label>$200</label>
                 </Carousel.Caption>
@@ -30,7 +30,7 @@ class MainCarousel extends Component{
 
                 <Carousel.Item>
                   <img className="d-block w-100" src="/images/carousel/bg3.jpg" alt="Third" />
-                <Carousel.Caption>
+                <Carousel.Caption className="carousel-caption container">
                   <span>This Nasa Design Cost </span>
                   <label>$250</label>
                 </Carousel.Caption>
@@ -38,7 +38,7 @@ class MainCarousel extends Component{
 
                 <Carousel.Item>
                   <img className="d-block w-100" src="/images/carousel/bg4.jpg" alt="Fourth" />
-                <Carousel.Caption>
+                <Carousel.Caption className="carousel-caption container">
                   <span>This Website Design Cost </span>
                   <label>$300</label>
                 </Carousel.Caption>

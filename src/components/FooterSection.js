@@ -75,7 +75,7 @@ class FooterSection extends Component {
             <div className="footer">
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-4">
+                        <div className="col-lg-4 col-md-12">
                             {this.state.items.map((item, id) => {
                                 return (
                                     <div key={id}>
@@ -96,7 +96,7 @@ class FooterSection extends Component {
                             
                         </div>
 
-                        <div className="col-md-2">
+                        <div className="col-lg-2 col-md-3">
                             {this.state.object.map((obj, id) => {
                                 return (
                                     <div key={id}>
@@ -109,7 +109,7 @@ class FooterSection extends Component {
                             })}
                         </div>
 
-                        <div className="col-md-2">
+                        <div className="col-lg-2 col-md-3">
                             {this.state.about.map((obj, id) => {
                                 return (
                                     <div key={id}>
@@ -122,7 +122,7 @@ class FooterSection extends Component {
                             })}
                         </div>
 
-                        <div className="col-md-2">
+                        <div className="col-lg-2 col-md-3">
                             {this.state.term.map((obj, id) => {
                                 return (
                                     <div key={id}>
@@ -135,23 +135,26 @@ class FooterSection extends Component {
                             })}
                         </div>
 
-                        <div className="col-md-2">
-                            {this.state.app.map((item, id) => {
-                                return (
-                                    <div key={id}>
-                                        <span>{item.head}</span>
-                                        <div className="app">
+                        <div className="col-lg-2 col-md-3">
+                        
+                        <div id="apps_block">
+                            <span>Apps</span>
+                            <div className="apps">
+                                {this.state.app.map((item, id) => {
+                                    return (
+                                        <div key={id} className="app">
                                             <img src={item.link} alt={item.alter} />
                                         </div>
-                                    </div>
-                                )
-                            })}
+                                    )
+                                })}
+                            </div>
+                        </div>
                             <div className="icons">
                                 {this.state.font.map((item, id) => {
                                     return (
                                         <div key={id}>
-                                                <i className={item.icon}></i>
-                                            </div>
+                                            <i className={item.icon}></i>
+                                        </div>
                                     )
                                 })}
                             </div>
@@ -163,7 +166,7 @@ class FooterSection extends Component {
                     <div className="dropdown-divider"></div>
 
                     <div className="row">
-                        <div className="col-md-3">
+                        <div className="col-lg-3 col-md-6">
                             {this.state.desc.map((item, id) => {
                                 return (
                                     <div key={id} className="footer-desc">
@@ -177,7 +180,7 @@ class FooterSection extends Component {
                                     </div>)
                             })}
                         </div>
-                        <div className="col-md-3">
+                        <div className="col-lg-3 col-md-6">
                             {this.state.desc.map((item, id) => {
                                 return (
                                     <div key={id} className="footer-desc">
@@ -191,7 +194,7 @@ class FooterSection extends Component {
                                     </div>)
                             })}
                         </div>
-                        <div className="col-md-6">
+                        <div className="col-lg-6 col-md-6">
                             {this.state.paragraph.map((item, id) => {
                                 return (
                                     <div key={id} className="footer-desc">

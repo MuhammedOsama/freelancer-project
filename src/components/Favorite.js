@@ -24,7 +24,7 @@ class Favorite extends Component {
                     <div className="row">
                         {this.state.items.map((item, id) => {
                             return(
-                            <div key={id} className="col-md-4">
+                            <div key={id} className="col-lg-4 col-md-6">
                                 <div className="crowd-box">
                                     <img src={item.link} alt={item.title}/>
                                     <div className="price-box">

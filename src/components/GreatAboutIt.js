@@ -24,7 +24,7 @@ class GreatAboutIt extends Component {
                     <div className="row">
                         {this.state.items.map((item, id) => {
                             return(
-                                <div key={id} className="col-md-4">
+                                <div key={id} className="col-lg-4 col-md-6">
                                     <img src={item.link} alt={item.title} />
                                     <h3>{item.title}</h3>
                                     <p>{item.description}</p>
