@@ -1,41 +1,38 @@
-import React from 'react';
+import React from "react";
+import{Image} from "react-bootstrap";
 
-export default (props) => {
+
+const AsUsedBy =()=>{
+
+    const images=[
+        {link: "/images//used/microsoft.svg", alt: "Microsoft", class: "col-md-2 col-4"},
+        {link: "/images//used/sap.svg", alt: "Sap", class: "col-md-2 col-4"},
+        {link: "/images//used/metlife.svg", alt: "MetLife", class: "col-md-2 col-4"},
+        {link: "/images//used/intel.svg", alt: "Intel", class: "col-md-2 col-4"},
+        {link: "/images//used/boeing.svg", alt: "Boeing", class: "col-md-2 col-4"},
+        {link: "/images//used/avery.svg", alt: "Avery", class: "col-md-2 col-4"}
+    ]
     
-        
-    const groups = {
-        "first-group": {
-            items: [
-                {link: "/images/used/microsoft.svg", imageAlt : "Microsoft"},
-                {link: "/images/used/sap.svg", imageAlt : "Sap"},
-                {link: "/images/used/metlife.svg", imageAlt : "MetLife"},
-                {link: "/images/used/intel.svg", imageAlt : "Intel"},
-            ]
-        },
-        "second-group": {
-            items: [
-                {link: "/images/used/boeing.svg", imageAlt : "Boeing"},
-                {link: "/images/used/avery.svg", imageAlt : "Avery"},
-                {link: "/images/used/pwc.svg", imageAlt : "Pwc"},
-                {link: "/images/used/ge.svg", imageAlt : "Ge"},
-            ]
-        }
-    };
-
-    const group = groups[props.groupID] || {};
-
     return(
-        <div id="as-used-by-block" className="container">
-            <span>As used By</span>
-            <div id ={props.id} className={props.className}>
-                {(group.items || []).map((item, id) => {
-                    return (
-                        <div key={id}>
-                            {item.link && <img src={item.link} alt={item.imageAlt } />}
-                        </div>
-                    )
-                })}
+    <div id="used-by" className="container px-0 mx-0">
+        <div className="row main-row m-0">
+            <div className=" column-1 text-center ">
+              <span>As used by</span>
+            </div>
+            <div className=" column-2 ">
+                <div className="row m-0">
+                    {images.map((image, i) => {
+                        return (
+                            <div key={i} className={image.class}>
+                                <Image src={image.link} alt={image.alt} />
+                            </div>
+                        )
+                    })}
+                </div>
             </div>
         </div>
+    </div>
     );
 }
+
+export default AsUsedBy;

@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './components/Header';
 import MainCarousel from './components/MainCarousel';
-// import AsUsedBy from './components/AsUsedBy';
+import AsUsedBy from './components/AsUsedBy';
 import NeedWorkDone from './components/NeedWorkDone';
 import GreatAboutIt from './components/GreatAboutIt';
 import Favorite from './components/Favorite';
@@ -15,8 +15,7 @@ const App = () => {
     <div className="app">
       <Header />
       <MainCarousel />
-      {/* <AsUsedBy groupID="first-group" />
-      <AsUsedBy groupID="second-group" /> */}
+      <AsUsedBy />
       <NeedWorkDone />
       <GreatAboutIt />
       <Favorite />
