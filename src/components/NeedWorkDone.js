@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 
 class NeedWorkDone extends Component {
 
-    constructor(porps) {
-        super(porps);
+    constructor(props) {
+        super(props);
         this.state = {
             items: [
                 {image: "/images/work/job.svg", title: "Post a job", description: "Post a job", paragraph: "It's easy. Simply post a job you need completed and receive competitive bids from freelancers within minutes."},
