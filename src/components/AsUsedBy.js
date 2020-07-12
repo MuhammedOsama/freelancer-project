@@ -1,14 +1,10 @@
-import React from 'react';
-import {connect} from 'react-redux';
-import {fetchAsUsedBy} from "../actions";
-class AsUsedBy extends React.Component {
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { fetchAsUsedBy } from "../actions/actions";
+class AsUsedBy extends Component {
 
     componentDidMount() {
-        this.props.fetchAsUsedBy()
-        .then(data => {
-            console.log(data);
-            
-        })
+        this.props.fetchAsUsedBy();
     }
 
     render() {
@@ -17,23 +13,24 @@ class AsUsedBy extends React.Component {
             <div id="as-used-by-block" className="container">
                 <span>As used By</span>
                 <div>
-                    {/* {this.props.data.map((image) => {
+                    {this.props.items.map((image) => {
                         return (
                             <div key={image.id}>
-                                {<img src={image.image} alt={image.title } />}
+                                <img src={image.image} alt={image.title} />
                             </div>
                         )
-                    })} */}
+                    })}
                 </div>
             </div>
         );
     }
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
+    console.log(state.asUsedBy);
     return {
-        data: state.data,
+        items: state.asUsedBy
     }
 }
 
-export default connect(mapStateToProps, {fetchAsUsedBy})(AsUsedBy);
+export default connect(mapStateToProps, { fetchAsUsedBy })(AsUsedBy);

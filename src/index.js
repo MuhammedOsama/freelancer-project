@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import {createStore, applyMiddleware, compose} from 'redux';
-import {Provider} from 'react-redux';
+import { createStore, applyMiddleware, compose } from 'redux';
+import { Provider } from 'react-redux';
 import reduxThunk from 'redux-thunk';
 import * as serviceWorker from './serviceWorker';
-import reducers from "./reducers";
+import reducers from "./reducers/reducers";
 
 // global style
 import 'bootstrap-v4-rtl/dist/css/bootstrap-rtl.min.css';

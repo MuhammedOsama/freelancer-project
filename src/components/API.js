@@ -1,35 +1,48 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
+import { Image } from "react-bootstrap";
+import { connect } from "react-redux";
+import { fetchApiCard } from "../actions/actions";
 
 class API extends Component {
 
-    render() {
+    componentDidMount() {
+        this.props.fetchApiCard();
+    }
+
+    render(){
         return (
-            <div className="api-section container">
-                <div className="first-card">
-                    <div className="img-proCard">
-                        <img src="/images/api/professionals.png" alt="Professionals" />
-                    </div>
-                    <div className="api-price">
-                        <span>FREELANCER API</span>
-                        <h4>43 million professionals on demand</h4>
-                        <p>Why hire people when you can simply integrate our talented cloud workforce instead?</p>
-                        <button>View Documentation</button>
-                    </div>
-                </div>
-                <div className="second-card">
-                    <div>
-                        <span>FREELANCER ENTERPRISE</span>
-                        <h4>Company budget? Get more done for less</h4>
-                        <p>Use our workforce of 43 million to help your business achieve more.</p>
-                        <button>Contact Us</button>
-                    </div>
-                    <div className="img-card">
-                        <img src="/images/api/company.png" alt="Company" />
-                    </div>
+            <div className="container cards">
+                <div className="row">
+                    {
+                       this.props.items.map((card,id)=>{
+                            return(
+                                <div key={id} className="col-md-6">
+                                    <div className="row lhs">
+                                        <div className={"col-xl-6 "+ card.imgClass}>
+                                            <Image className="w-100" src={card.image} alt={card.alter}/>
+                                        </div>
+                                        <div className={"col-xl-6 details "+card.txt}>
+                                            <span>{card.title}</span>
+                                            <h3>{card.desc}</h3>
+                                            <p>{card.details}</p>
+                                            <a href="/" className="d-none d-xl-inline-block">{card.btn}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            );
+                        })
+                    }
                 </div>
             </div>
         );
     }
+};
+
+const mapStateToProps = state => {
+    console.log(state.apiCard);
+    return {
+        items: state.apiCard
+    }
 }
 
-export default API;
+export default connect(mapStateToProps, { fetchApiCard })(API);

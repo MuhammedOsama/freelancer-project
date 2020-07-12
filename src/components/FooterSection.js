@@ -6,7 +6,7 @@ class FooterSection extends Component {
         super(props);
         this.state = {
             items: [
-                {link: "/images/footer/freelancer-logo-light.svg", alter: "LogoLight"},
+                {link: "/freelancer-logo-light.svg", alter: "LogoLight"},
             ],
             details: [
                 {icon: "fas fa-archway", title: "US (International) / English"},
@@ -46,8 +46,8 @@ class FooterSection extends Component {
             ],
             app: [
                 {head: "Apps"},
-                {link: "/images/footer/app-store.svg", alter: "AppStore"},
-                {link: "/images/footer/google-play.svg", alter: "GooglePlay"}
+                {link: "/app-store.svg", alter: "AppStore"},
+                {link: "/google-play.svg", alter: "GooglePlay"}
             ],
             font: [
                 {icon: "fab fa-facebook"},

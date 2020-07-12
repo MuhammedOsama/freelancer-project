@@ -36,7 +36,6 @@ body {
     }
     .contact {
         float: right;
-        display: inline-block;
         a {
             margin: 20px;
             color: #000;
@@ -190,6 +189,7 @@ body {
     }
     img {
         width: 70%;
+        margin-bottom: 15px;
         @media (max-width: 768px) {
             margin-bottom: 20px;
         }
@@ -304,57 +304,80 @@ body {
 
 // End Categories
 //  Start API
-.api-section {
-    margin-bottom: 120px;
-    display: flex;
-    @media (max-width: 768px) {
-        display: none;
+.cards {
+    margin-bottom: 80px;
+    color: #000;
+    @media (min-width: 768px) {
+        max-width: 900px;
     }
-    img {
-        width: 110%;
-        margin-top: 20px;
+    @media (min-width: 1200px) {
+        max-width: 1200px;
     }
-    .first-card {
-        padding: 20px;
-        display: flex;
-        margin-right: 30px;
-        background-color: #DDD;
+    .lhs {
+        background: $cardColor;
+        padding: 24px;
+        box-shadow: 0 0 4px 0 rgba(0, 0, 0, .08), 0 2px 4px 0 rgba(0, 0, 0, .12);
         border-radius: 5px;
-        span {
-            color: $secondColor;
+    }
+    .row {
+        justify-content: space-between;
+    }
+    .col-md-6 {
+        @media (min-width: 768px) {
+            flex: 0 0 50%;
+            max-width: 49%;
         }
-        h4 {
-            font-weight: 600;
+        .row {
+            @media (max-width: 1200px) {
+                background-color: #FFF;
+                padding: 0;
+                margin-top: 30px;
+            }
+            .col-xl-6 {
+                @media (max-width: 1200px) {
+                    background: $bgCard;
+                    padding: 0px 116px;
+                }
+            }
+            .details {
+                @media (max-width: 1200px) {
+                    padding: 30px;
+                    background-color: #FFF;
+                    height: 220px;
+                }
+            }
+            img {
+                @media (max-width: 1200px) {
+                    max-width: 300px;
+                }
+            }
         }
     }
-    .api-price {
-        text-align: right;
-        button {
-            padding: 8px;
-            font-weight: 600;
-            background-color: $btnColor;
-            border: 1px solid $btnColor;
-            color: #FFF;
-        }
+    span {
+        font-size: 16px;
+        text-transform: uppercase;
+        color: $btnColor;
     }
-    .second-card {
-        padding: 20px;
-        display: flex;
-        background-color: #DDD;
-        border-radius: 5px;
-        span {
-            color: $secondColor;
-        }
-        h4 {
-            font-weight: 600;
-        }
-        button {
-            margin-top: 22px;
-            padding: 8px;
-            font-weight: 600;
-            background-color: $btnColor;
-            border: 1px solid $btnColor;
-            color: #FFF;
+    h3 {
+        font-size: 20px;
+        font-weight: 700;
+        margin: 16px 0;
+    }
+    p {
+        height: 75px;
+    }
+    a {
+        cursor: pointer;
+        text-decoration: none;
+        padding: 7px 12px;
+        color: #FFF;
+        background: linear-gradient(180deg, #139ff0 0, $btnColor);
+        text-transform: capitalize;
+        font-weight: 600;
+        font-size: 14px;
+        border: 1px solid #1f7ae2;
+        &:hover {
+            background: #1f7ae2;
         }
     }
 }
@@ -438,12 +461,9 @@ body {
                 color: #FFF;
             }
         }
-        .apps_block {
+        #apps_block {
             .apps {
                 .app {
-                    &:last-of-type {
-                        margin-left: 20px;
-                    }
                     img {
                         margin-bottom: 20px;
                         cursor: pointer;
