@@ -25,7 +25,7 @@ class MainCarousel extends Component{
                 <img className="d-block w-100" src={image.image} alt={image.details} />
                 <Carousel.Caption className="carousel-caption container">
                   <span>{image.details}</span>
-                  <span>{image.label}</span>
+                  <label>{image.label}</label>
                 </Carousel.Caption>
               </Carousel.Item>
             )

@@ -13,13 +13,15 @@ class AsUsedBy extends Component {
             <div id="as-used-by-block" className="container">
                 <span>As used By</span>
                 <div>
-                    {this.props.items.map((image) => {
-                        return (
-                            <div key={image.id}>
-                                <img src={image.image} alt={image.title} />
-                            </div>
-                        )
-                    })}
+                    <div className="row">
+                        {this.props.items.map((image, id) => {
+                            return (
+                                <div className="col" key={id}>
+                                    <img src={image.image} alt={image.title} />
+                                </div>
+                            )
+                        })}
+                    </div>
                 </div>
             </div>
         );
