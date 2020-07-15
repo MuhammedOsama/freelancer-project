@@ -1,4 +1,4 @@
-# React-Freelancer.com
+# Freelancer-Project
 
 ## Table of contents
 * [General info](#general-info)
@@ -47,10 +47,10 @@ export default Demo;
 ```
 
 ## Setup
-To run this project, install it locally using npm:
+To run this project you need to clone the server that contains whole data [freelancer-api](https://github.com/MuhammedOsama/freelancer-api) and follow instructions that are placed [here](https://github.com/MuhammedOsama/freelancer-api/blob/master/README.md) then install project locally using these commands:
 
 ```
-$ cd ../react-core 
-$ npm install
-$ npm start
+$ cd ../freelancer-project
+$ yarn
+$ yarn start
 ```
