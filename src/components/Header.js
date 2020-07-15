@@ -5,7 +5,7 @@ class Header extends Component {
     return (
         <div id="header" className="container">
             <div className="jobs">
-                <img src="/images/header/logo.svg" alt="Freelancer"/>
+                <img src="/logo.svg" alt="Freelancer"/>
                 <a href="/">How It Works</a>
                 <a href="/">Browse Jobs</a>
             </div>

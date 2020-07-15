@@ -1,38 +1,38 @@
-import React from "react";
-import{Image} from "react-bootstrap";
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { fetchAsUsedBy } from "../actions/actions";
+class AsUsedBy extends Component {
 
+    componentDidMount() {
+        this.props.fetchAsUsedBy();
+    }
 
-const AsUsedBy =()=>{
-
-    const images=[
-        {link: "/images//used/microsoft.svg", alt: "Microsoft", class: "col-md-2 col-4"},
-        {link: "/images//used/sap.svg", alt: "Sap", class: "col-md-2 col-4"},
-        {link: "/images//used/metlife.svg", alt: "MetLife", class: "col-md-2 col-4"},
-        {link: "/images//used/intel.svg", alt: "Intel", class: "col-md-2 col-4"},
-        {link: "/images//used/boeing.svg", alt: "Boeing", class: "col-md-2 col-4"},
-        {link: "/images//used/avery.svg", alt: "Avery", class: "col-md-2 col-4"}
-    ]
-    
-    return(
-    <div id="used-by" className="container px-0 mx-0">
-        <div className="row main-row m-0">
-            <div className=" column-1 text-center ">
-              <span>As used by</span>
-            </div>
-            <div className=" column-2 ">
-                <div className="row m-0">
-                    {images.map((image, i) => {
-                        return (
-                            <div key={i} className={image.class}>
-                                <Image src={image.link} alt={image.alt} />
-                            </div>
-                        )
-                    })}
+    render() {
+        
+        return(
+            <div id="as-used-by-block" className="container">
+                <span>As used By</span>
+                <div>
+                    <div className="row">
+                        {this.props.items.map((image, id) => {
+                            return (
+                                <div className="col" key={id}>
+                                    <img src={image.image} alt={image.title} />
+                                </div>
+                            )
+                        })}
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-    );
+        );
+    }
+};
+
+const mapStateToProps = (state) => {
+    console.log(state.asUsedBy);
+    return {
+        items: state.asUsedBy
+    }
 }
 
-export default AsUsedBy;
+export default connect(mapStateToProps, { fetchAsUsedBy })(AsUsedBy);

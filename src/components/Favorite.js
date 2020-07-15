@@ -1,19 +1,11 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { fetchFavorite } from "../actions/actions";
 
 class Favorite extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            items: [
-                {link: "/images/crowd/website.png", title: "Website Development", description: "From $300 USD"},
-                {link: "/images/crowd/graphic.png", title: "Graphic Design", description: "From $100 USD"},
-                {link: "/images/crowd/design.png", title: "Logo Design", description: "From $50 USD"},
-                {link: "/images/crowd/marketing.png", title: "Marketing", description: "From $150 USD"},
-                {link: "/images/crowd/writing.png", title: "Writing", description: "From $50 USD"},
-                {link: "/images/crowd/mobile.png", title: "Mobile App", description: "From $50 USD / hour"}
-            ]
-        }
+    componentDidMount() {
+        this.props.fetchFavorite();
     }
 
     render () {
@@ -22,14 +14,14 @@ class Favorite extends Component {
                 <h2>Crowd favorites<br/>Here are some of our most popular projects:</h2>
                 <div className="container">
                     <div className="row">
-                        {this.state.items.map((item, id) => {
+                        {this.props.items.map((item, id) => {
                             return(
                             <div key={id} className="col-lg-4 col-md-6">
                                 <div className="crowd-box">
                                     <img src={item.link} alt={item.title}/>
                                     <div className="price-box">
                                         <h5>{item.title}</h5>
-                                        <span>{item.description}</span>
+                                        <span>{item.desc}</span>
                                     </div>
                                 </div>
                             </div>
@@ -42,4 +34,11 @@ class Favorite extends Component {
     }
 }
 
-export default Favorite;
+const mapStateToProps = state => {
+    console.log(state.favorite);
+    return {
+        items: state.favorite
+    }
+}
+
+export default connect(mapStateToProps, { fetchFavorite })(Favorite);
